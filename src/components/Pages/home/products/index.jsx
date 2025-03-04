@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 const products = [
   {
     id: 1,
@@ -109,38 +110,40 @@ const Products = () => {
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="relative border p-4 rounded-lg shadow-md bg-white h-80">
-                {product.discount && (
-                  <span className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-xs md:text-sm font-semibold rounded-full">
-                    {product.discount}
-                  </span>
-                )}
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-40 md:h-48 lg:h-52 object-cover rounded-md"
-                />
-                <h3
-                  className="text-center mt-2 text-[13px] text-[#333] overflow-hidden"
-                  style={{
-                    display: "-webkit-box",
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: "vertical",
-                  }}
-                >
-                  {product.title}
-                </h3>
-                <div className="flex items-center justify-center gap-2">
-                  <p className="text-center text-red-600 font-medium text-base md:text-lg">
-                    {product.price}
-                  </p>
-                  {product.oldPrice && (
-                    <p className="text-center text-gray-500 line-through text-sm md:text-base">
-                      {product.oldPrice}
-                    </p>
+              <NavLink to={"/1"}>
+                <div className="relative border p-4 rounded-lg shadow-md bg-white h-80">
+                  {product.discount && (
+                    <span className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-xs md:text-sm font-semibold rounded-full">
+                      {product.discount}
+                    </span>
                   )}
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-40 md:h-48 lg:h-52 object-cover rounded-md"
+                  />
+                  <h3
+                    className="text-center mt-2 text-[13px] text-[#333] overflow-hidden"
+                    style={{
+                      display: "-webkit-box",
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: "vertical",
+                    }}
+                  >
+                    {product.title}
+                  </h3>
+                  <div className="flex items-center justify-center gap-2">
+                    <p className="text-center text-red-600 font-medium text-base md:text-lg">
+                      {product.price}
+                    </p>
+                    {product.oldPrice && (
+                      <p className="text-center text-gray-500 line-through text-sm md:text-base">
+                        {product.oldPrice}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </NavLink>
             </SwiperSlide>
           ))}
         </Swiper>

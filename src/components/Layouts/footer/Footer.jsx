@@ -3,7 +3,7 @@ import { FaFacebookF, FaYoutube, FaTiktok, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 py-8 text-gray-800">
+    <footer className=" py-8 text-gray-800">
       <div className="container max-w-[1220px]  mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company Info */}
         <div>

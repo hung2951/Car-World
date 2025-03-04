@@ -1,9 +1,17 @@
+import { useEffect } from "react";
 import RootRoutes from "./Routes";
-import 'react-slideshow-image/dist/styles.css'
+import "react-slideshow-image/dist/styles.css";
+import { useLocation } from "react-router-dom";
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Cuộn mượt lên đầu trang
+  }, [pathname]); // Chạy lại khi pathname thay đổi
+
   return (
     <>
-      <RootRoutes/>
+      <RootRoutes />
     </>
   );
 }
