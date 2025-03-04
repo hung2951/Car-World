@@ -11,6 +11,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useState } from "react";
+import { AiFillLike } from "react-icons/ai";
+import DescriptionProduct from "./description";
 
 const ProductDetail = () => {
   const configurations = [
@@ -189,22 +191,27 @@ const ProductDetail = () => {
           <div className="col-span-4 bg-white p-4 shadow-md rounded-md">
             <h3 className="font-bold text-gray-800">Liên hệ</h3>
             <p className="flex items-center mt-2">
-              <FaPhoneAlt className="text-blue-600 mr-2" /> 0825.233.233
+              <FaPhoneAlt className="text-blue-600 mr-2" /> 01230456789
             </p>
             <p className="flex items-center mt-2">
               <FaEnvelope className="text-blue-600 mr-2" />{" "}
-              hotrolaptopaz@gmail.com
+               contact@computerworld.com
             </p>
           </div>
 
           {/* Social Share */}
-          <div className=" bg-white p-4 shadow-md rounded-md">
-            <button className=" bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-              <FaFacebookF className="mr-2" /> Thích 43K
+          <div className=" bg-white p-4 shadow-md rounded-md w-full text-sm">
+            <button className=" bg-blue-600 text-white px-4 py-1 rounded-md hover:bg-blue-700 mr-2">
+              <AiFillLike className=" inline" /> Thích 43K
+            </button>
+            <button className=" bg-blue-600 text-white px-4 py-1 rounded-md hover:bg-blue-700">
+               Chia sẻ
             </button>
           </div>
         </div>
       </div>
+      {/* Description */}
+      <DescriptionProduct/>
     </div>
   );
 };
