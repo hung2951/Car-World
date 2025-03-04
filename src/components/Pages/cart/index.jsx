@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { FiTrash2 } from "react-icons/fi";
 import { FaGift } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [quantity, setQuantity] = useState(1);
   const price = 13990000;
   const originalPrice = 16490000;
   const discount = originalPrice - price;
+  const navigation = useNavigate();
+  const Payment = () => {
+    navigation('/payment');
+  }
   return (
     <>
       <div className="p-4 md:p-8 min-h-screen mt-20 max-w-[1220px] mx-auto max-sm:w-full max-sm:p-0">
@@ -80,7 +85,7 @@ const Cart = () => {
                 <span>Cần thanh toán</span>
                 <span className="text-red-600">{price.toLocaleString()} đ</span>
               </div>
-              <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-semibold">
+              <button onClick={()=>Payment()} className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-semibold">
                 Xác nhận đơn
               </button>
             </div>
