@@ -50,7 +50,7 @@ const Cart = () => {
             </div>
           </div>
           <div className="w-1/3 shadow-md rounded-lg max-sm:w-full">
-            <div className=" p-4 bg-gray-50 rounded-lg shadow-sm">
+            <div className=" p-4 rounded-lg shadow-sm">
               <h3 className="text-sm font-semibold flex items-center gap-2">
                 <FaGift className="text-red-500" /> Quà tặng
               </h3>
@@ -64,13 +64,13 @@ const Cart = () => {
               </div>
             </div>
 
-            <div className="mt-6 bg-gray-100 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold">Thông tin đơn hàng</h3>
-              <div className="flex justify-between mt-2 text-sm">
+            <div className="mt-6 p-4 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">Thông tin đơn hàng</h3>
+              <div className="flex justify-between pb-2 text-sm border-b border-gray-200">
                 <span>Tổng tiền</span>
                 <span>{originalPrice.toLocaleString()} đ</span>
               </div>
-              <div className="flex justify-between mt-2 text-sm">
+              <div className="flex justify-between mt-2 text-sm pb-2 border-b border-gray-20">
                 <span>Tổng khuyến mãi</span>
                 <span className="text-red-500">
                   {discount.toLocaleString()} đ
