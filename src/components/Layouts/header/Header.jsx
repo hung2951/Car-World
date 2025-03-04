@@ -191,7 +191,7 @@ const HeaderClient = () => {
               </Form.Item>
             </Form>
             <div className={styles.cart}>
-              <NavLink to="">
+              <NavLink to="/cart">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
