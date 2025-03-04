@@ -14,9 +14,9 @@ const HeaderClient = () => {
 
   return (
     <>
-      <div className={styles.fixed_top}>
+      <div className={`${styles.fixed_top} group`}>
         <header>
-          <div className={styles.header}>
+          <div className={`${styles.header} `}>
             <div className={styles.logo}>
               <NavLink to={"/"}>
                 <img
@@ -208,7 +208,7 @@ const HeaderClient = () => {
                 </svg>
               </NavLink>
             </div>
-            <div className={styles.account}>
+            <div className={`${styles.account}`}>
               <Login/>
             </div>
           </div>
