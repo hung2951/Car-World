@@ -62,7 +62,7 @@ const Footer = () => {
         </p>
       </div>
       {/* Hotline Button */}
-      <div className="fixed bottom-5 right-5 bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 shadow-lg cursor-pointer">
+      <div className="z-50 fixed bottom-5 right-5 bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 shadow-lg cursor-pointer">
         <FaPhoneAlt />
         <span>0123 456 789</span>
       </div>
