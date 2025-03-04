@@ -51,7 +51,7 @@ const ProductDetail = () => {
   return (
     <div className=" p-4 mt-28 max-w-[1220px] mx-auto">
       {/* Product Info */}
-      <div className="bg-white p-6 shadow-lg rounded-md grid grid-cols-12 gap-6">
+      <div className="bg-white p-6 shadow-lg rounded-md grid grid-cols-12 gap-6 max-sm:block">
         {/* Left: Images */}
         <div className="col-span-4">
           
@@ -92,7 +92,7 @@ const ProductDetail = () => {
 
             <h2 className="font-bold mt-2">CẤU HÌNH:</h2>
 
-            <div className="grid md:grid-cols-2 gap-3 mt-3">
+            <div className="grid md:grid-cols-2 gap-3 mt-3 max-sm:grid-cols-2">
               {configurations.map((config) => (
                 <div
                   key={config.id}
