@@ -110,7 +110,7 @@ const Products = () => {
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
-              <NavLink to={"/1"}>
+              <NavLink to={"/product/1"}>
                 <div className="relative border p-4 rounded-lg shadow-md bg-white h-80">
                   {product.discount && (
                     <span className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-xs md:text-sm font-semibold rounded-full">

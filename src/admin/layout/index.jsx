@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
 import { Outlet } from "react-router-dom";
-
+import NavbarAdmin from "../../components/admin/nav";
+import { convertToAntdMenuItems } from "../../ultis/convertToAntdMenuItems";
 const { Header, Sider, Content } = Layout;
 
 const LayoutAdmin = () => {
@@ -19,29 +14,19 @@ const LayoutAdmin = () => {
   return (
     <Layout className="min-h-screen">
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="demo-logo-vertical" />
+        <div className="demo-logo-vertical">
+          <img className="w-full m-auto p-2"
+            src="https://inkythuatso.com/uploads/images/2021/12/logo-free-fire-inkythuatso-3-01-04-09-17-28.jpg"
+            alt=""
+          />
+        </div>
+        {/* Navbar */}
         <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["1"]}
-          items={[
-            {
-              key: "1",
-              icon: <UserOutlined />,
-              label: "nav 1",
-            },
-            {
-              key: "2",
-              icon: <VideoCameraOutlined />,
-              label: "nav 2",
-            },
-            {
-              key: "3",
-              icon: <UploadOutlined />,
-              label: "nav 3",
-            },
-          ]}
-        />
+        theme="dark"
+        mode="inline"
+        defaultSelectedKeys={["1"]}
+        items={convertToAntdMenuItems([...NavbarAdmin])}
+      />
       </Sider>
       <Layout>
         <Header
@@ -70,7 +55,7 @@ const LayoutAdmin = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          <Outlet/>
+          <Outlet />
         </Content>
       </Layout>
     </Layout>

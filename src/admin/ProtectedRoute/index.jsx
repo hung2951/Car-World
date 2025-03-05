@@ -3,6 +3,6 @@ import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
     const isAuthenticated = true;
-    return isAuthenticated ? children : <Navigate to="/dang-nhap" replace />;
+    return isAuthenticated ? children : <Navigate to="/" replace />;
 };
 export default ProtectedRoute;
