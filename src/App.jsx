@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import RootRoutes from "./Routes";
 import "react-slideshow-image/dist/styles.css";
 import { useLocation } from "react-router-dom";
+import RootRoutes from "./Routes";
 function App() {
   const { pathname } = useLocation();
 
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <RootRoutes />
+      <RootRoutes/>
     </>
   );
 }

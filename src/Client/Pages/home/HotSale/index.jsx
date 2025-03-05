@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import { Slide } from "react-slideshow-image";
 import { Form, NavLink } from "react-router-dom";
-import { FormatPriceVND } from "../../../../ultis/format";
+import { FormatPriceVND } from "../../../../../ultis/format";
 const HotSaleComponent = () => {
   const products = [
     {

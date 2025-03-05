@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Button, Card } from "antd";
 import PopupSignin from "./popupSignin";
 import PopupSignup from "./popupSignup";
@@ -7,7 +7,7 @@ const Login = () => {
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   return (
     <>
-      <div className="relative">
+      <div className="relative group block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

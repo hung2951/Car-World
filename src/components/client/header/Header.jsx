@@ -14,7 +14,7 @@ const HeaderClient = () => {
 
   return (
     <>
-      <div className={`${styles.fixed_top} group`}>
+      <div className={`${styles.fixed_top}`}>
         <header>
           <div className={`${styles.header} `}>
             <div className={styles.logo}>
